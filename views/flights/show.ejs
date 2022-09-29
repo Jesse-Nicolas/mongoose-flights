@@ -1,0 +1,31 @@
+<%- include('../partials/html-head')  %> 
+<%- include('../partials/nav')  %>
+
+<main>
+<h1><%= title %></h1>
+<div>
+  Airline: <%= flight.airline %>
+</div>
+<div>
+  Airport: <%= flight.airport %>
+</div>
+<div>
+  Flight #<%= flight.flightNo %>
+</div>
+<div>
+  Departure: <%= flight.departs %>
+</div>
+<a href="<%= flight.id %>/edit">Edit Flight Details</a>
+<div>
+  <h3>Tickets</h3>
+  <form action="/flights/<%= flight._id %>/tickets" method="POST">
+    <label for="seat-input">Seat:</label>
+    <input type="text" name="seat" id="seat-input">
+    <label for="price-input">Price</label>
+    <input type="number" name="price" id="price-input">
+    <button type="submit">Add Ticket</button>
+  </form>
+</div>
+</main>
+
+<%- include('../partials/footer')  %> 
