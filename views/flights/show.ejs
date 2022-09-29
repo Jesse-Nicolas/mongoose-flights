@@ -25,6 +25,17 @@
     <input type="number" name="price" id="price-input">
     <button type="submit">Add Ticket</button>
   </form>
+  <% if (flight.tickets.length) { %>
+    <ul>
+      <% flight.tickets.forEach(function(ticket) {  %>
+        <li>
+            Seat #<%= ticket.seat %> -- Cost: $<%= ticket.price %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <h3>Saved tickets will be displayed here!</h3>
+  <% } %>
 </div>
 </main>
 
