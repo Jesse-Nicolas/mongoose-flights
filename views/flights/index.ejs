@@ -7,7 +7,7 @@
     <li> 
       <a href="/flights/<%= flight.id %>">
         <%= flight.airline %> flight #<%= flight.flightNo %> 
-        --- departs <%= flight.departs %> from <%= flight.airport %>
+        --- departs <%= flight.departs.toString().slice(0, 21) %> from <%= flight.airport %>
       </a>
       <form action="/flights/<%= flight.id %>?_method=DELETE" method="POST">
         <button>Delete</button>
