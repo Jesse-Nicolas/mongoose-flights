@@ -1,6 +1,9 @@
 <%- include('../partials/html-head')  %> 
 <%- include('../partials/nav')  %>
 
+<% let plusOneYear = new Date() %>
+<% plusOneYear.setFullYear(plusOneYear.getFullYear() + 1) %>
+
 <main>
 <h2>Add a new flight</h2>
 <form action="/flights" method="POST">
@@ -11,17 +14,17 @@
     <option value="United">United</option>
   </select>
   <label for="airport-input">Airport:</label>
-  <select name="airport" >
+  <select name="airport">
+    <option value="DEN">DEN</option>
     <option value="AUS">AUS</option>
     <option value="DFW">DFW</option>
-    <option value="DEN">DEN</option>
     <option value="LAX">LAX</option>
     <option value="SAN">SAN</option>
   </select>
   <label for="num-input">Flight Number:</label>
   <input type="number" name="flightNo" id="num-input">
   <label for="date-input">Departure Date:</label>
-  <input type="date" name="departs" id="date-input">
+  <input type="date" name="departs" id="date-input" value="<%= plusOneYear.toISOString().slice(0, 10) %>">
   <button type="submit">Add Flight</button>
 </form>
 </main>
