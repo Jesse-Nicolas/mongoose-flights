@@ -1,13 +1,19 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(203, 196, 196);
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
 nav {
   display: flex; 
   justify-content: space-around;
+  background-color: bisque;
+}
+
+nav > a.active {
+  color: #00B7FF;
 }
