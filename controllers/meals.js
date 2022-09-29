@@ -4,7 +4,7 @@ function newMeal(req, res)  {
   Meal.find({})
   .then(meals =>  {
     res.render('meals/new', {
-      title: 'New Meal',
+      title: 'Add Meal',
       meals: meals,
     })
   })

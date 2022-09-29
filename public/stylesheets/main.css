@@ -1,19 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(203, 196, 196);
+  background-color: white;
+  color: #2F2D2E;
 }
 
 a {
-  color: black;
+  color: #70c0e0;
 }
 
 nav {
   display: flex; 
+  align-items: center;
   justify-content: space-around;
-  background-color: bisque;
+  background-color: #2F2D2E;
+  min-height: 5vh;
 }
 
 nav > a.active {
-  color: #00B7FF;
+  color: #D1B3C4;
 }
